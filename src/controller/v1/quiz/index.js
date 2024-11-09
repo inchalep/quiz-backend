@@ -137,7 +137,7 @@ const updateScore = async (req, res) => {
       { _id: userId },
       {
         $set: {
-          score: Number(score),
+          score: Number(score.toFixed(2)),
         },
       }
     );
